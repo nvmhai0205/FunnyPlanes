@@ -5,7 +5,8 @@ export const useStyles = makeStyles({
     container: {
         height: 500,
         width: 400,
-        border: "1px solid #ddd",
+        boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
+        marginLeft: 10,
         borderRadius: 10,
     },
     head: {
@@ -29,5 +30,6 @@ export const useStyles = makeStyles({
         borderRadius: 10,
         padding: 10,
         overflowY: "scroll",
+        boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
     }
 })

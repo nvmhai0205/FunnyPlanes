@@ -16,9 +16,6 @@ function Task(props) {
                 <TaskItem status={true} name="Change color of button and text" />
                 <TaskItem status={true} name="Change color of button and text" />
                 <TaskItem status={true} name="Change color of button and text" />
-                <TaskItem status={true} name="Change color of button and text" />
-                <TaskItem status={true} name="Change color of button and text" />
-                <TaskItem status={true} name="Change color of button and text" />
             </div>
         </div>
     )

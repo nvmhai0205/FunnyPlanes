@@ -5,6 +5,9 @@ export const useStyles = makeStyles({
     root: {
         height: 90,
         borderBottom: "1px solid #aaa",
+        position: "fixed",
+        backgroundColor: 'white',
+        width: "100%",
     },
     navbar: {
         height: 80,
