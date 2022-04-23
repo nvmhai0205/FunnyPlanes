@@ -23,17 +23,3 @@ a {
   text-decoration: none;
   color: #333,
 }
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-
-::-webkit-scrollbar-thumb {
-  background: #ccc;
-}
-
-
-::-webkit-scrollbar-thumb:hover {
-  background: #999;
-}
