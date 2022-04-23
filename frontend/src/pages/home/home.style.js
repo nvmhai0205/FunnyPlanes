@@ -13,7 +13,7 @@ export const useStyles = makeStyles({
         display: 'flex',
         alignItems: "center",
         "& div": {
-            backgroundColor: "#3E6D81",
+            backgroundColor: "#EE4266",
             color: "white",
             padding: "10px 20px",
             borderRadius: 10,

@@ -29,7 +29,7 @@ function Header() {
                                 </Link>
                             </Grid>
                             <Grid item xs={3}>
-                                <Link to="/">
+                                <Link to="/project">
                                     <div className={classes.navitem}>
                                         <AiOutlineProject />
                                         Project

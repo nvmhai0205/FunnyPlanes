@@ -6,5 +6,6 @@ export const useStyles = makeStyles({
         display: "flex",
         alignItems: "center",
         marginBottom: 10,
+        fontSize: 14,
     }
 });
