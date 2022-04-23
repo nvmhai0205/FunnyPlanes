@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Grid} from "@mui/material";
 import useStyles from './mycollections.style';
 import CollectionBox from '../../components/collections/CollectionBox';
@@ -63,14 +63,134 @@ const collections = [{img: FireImg
 
 
 ]},
+{img: FireImg
+    ,items: [
+    {
+        src: item,
+        collected: false
+    },
+    {
+        src: item,
+        collected: true
+    },
+    {
+        src: item,
+        collected: false
+    },
+    {
+        src: item,
+        collected: true
+    },{
+        src: item,
+        collected: false
+    },
+    {
+        src: item,
+        collected: true
+    }
 
+
+]},
+{img: WaterImg
+    ,items: [
+    {
+        src: WaterItem,
+        collected: true
+    },
+    {
+        src: WaterItem,
+        collected: false
+    },
+    {
+        src: WaterItem,
+        collected: false
+    },
+    {
+        src: WaterItem,
+        collected: false
+    },{
+        src: WaterItem,
+        collected: true
+    },
+    {
+        src: WaterItem,
+        collected: true
+    }
+
+
+]},
+
+{img: FireImg
+    ,items: [
+    {
+        src: item,
+        collected: false
+    },
+    {
+        src: item,
+        collected: true
+    },
+    {
+        src: item,
+        collected: false
+    },
+    {
+        src: item,
+        collected: true
+    },{
+        src: item,
+        collected: false
+    },
+    {
+        src: item,
+        collected: true
+    }
+
+
+]},
+{img: WaterImg
+    ,items: [
+    {
+        src: WaterItem,
+        collected: true
+    },
+    {
+        src: WaterItem,
+        collected: false
+    },
+    {
+        src: WaterItem,
+        collected: false
+    },
+    {
+        src: WaterItem,
+        collected: true
+    },{
+        src: WaterItem,
+        collected: false
+    },
+    {
+        src: WaterItem,
+        collected: true
+    },
+    {
+        src: WaterItem,
+        collected: true
+    }
+
+
+]},
 
 ]
+
+const STEP = 2;
 
 const MyCollections = ({}) => {
 
     const classes = useStyles();
-
+   
+    const [maxIndex, setMaxIndex] = useState(STEP - 1);
+    
     return (
         <>
             <div className={classes.headerContainer}>
@@ -80,12 +200,19 @@ const MyCollections = ({}) => {
             </div>
             <div className={classes.collectionsBox}>
             {
-                collections.map((collection, index) => <CollectionBox collection={collection}/>)
+                collections.map((collection, index) => index <= maxIndex ? <CollectionBox collection={collection} key={index}/> : null)
             }
             
             </div>
-
-            <Button variant="contained">Contained</Button>
+            <div className={classes.bottom}>
+                {
+                    maxIndex < collections.length - 1 ? <Button className={classes.btn}
+                    onClick={() => setMaxIndex(maxIndex + STEP < collections.length ? maxIndex + STEP : collections.length)}
+                    >View more >> </Button> : null
+                }
+                
+            </div>
+            
         </>
     )
 }

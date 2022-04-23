@@ -16,8 +16,13 @@ const useStyles = makeStyles({
             fontSize: '28px',
             fontWeight: '500'
         }
+    },
+    bottom: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        padding: '10px 20px'
     }
-
 });
 
 
