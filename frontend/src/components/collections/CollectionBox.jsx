@@ -48,10 +48,6 @@ const CollectionBox = ({collection}) => {
                     </Grid>
                     )
                 }
-
-
-
-
             </Grid>
 
         </div>
