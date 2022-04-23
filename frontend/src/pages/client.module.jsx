@@ -1,15 +1,15 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import Header from "../components/header.component";
+import { Navigate, Route, Routes } from "react-router-dom";
+import Header from "../components/header/header.component";
 import Home from "./home/home.page";
 
 function Client() {
     return (
         <>
-            <Header/>
+            <Header />
             <Routes>
-                <Route path="/" exact element={<Home/>} />
-                <Route path="*" element={<Navigate to="/" replace/>}/>
+                <Route path="/" element={<Home />} />
+                <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </>
     );
