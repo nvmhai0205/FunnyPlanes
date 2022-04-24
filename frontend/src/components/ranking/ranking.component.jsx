@@ -3,16 +3,16 @@ import "./ranking.css"
 
 
 const data = [
-    { name: "Anom Brus", no: 1, num_collection: 100 },
-    { name: "Dam Stank", no: 2, num_collection: 120},
-    { name: "Jujustsu Kaisen", no: 3, num_collection: 110},
-    { name: "Kimestsu no Yaiba", no: 4, num_collection: 100 },
-    { name: "Harry Potter", no: 5, num_collection: 120},
-    { name: "Rone Weslay", no: 6, num_collection: 110},
-    { name: "Anom", no: 7, num_collection: 100 },
-    { name: "Anom", no: 8, num_collection: 120},
-    { name: "Anom", no: 9, num_collection: 110},
-    { name: "Anom", no: 10, num_collection: 110}
+    { name: "Anom Brus", no: 1, num_collection: 200 },
+    { name: "Dam Stank", no: 2, num_collection: 180},
+    { name: "Jujustsu Kaisen", no: 3, num_collection: 150},
+    { name: "Kimestsu no Yaiba", no: 4, num_collection: 130 },
+    { name: "Harry Potter", no: 5, num_collection: 100},
+    { name: "Rone Weslay", no: 6, num_collection: 90},
+    { name: "Anom", no: 7, num_collection: 80 },
+    { name: "Anom", no: 8, num_collection: 70},
+    { name: "Anom", no: 9, num_collection: 70},
+    { name: "Anom", no: 10, num_collection: 50}
   ]
 function Ranking() {
     function position(val){
