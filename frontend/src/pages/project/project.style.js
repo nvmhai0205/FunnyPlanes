@@ -16,8 +16,8 @@ export const useStyles = makeStyles({
         }
     },
     item: {
-        height: 40,
-        width: 280,
+        height: 60,
+        width: 320,
         display: "flex",
         alignItems: "center",
         padding: "0px 10px",
@@ -35,8 +35,8 @@ export const useStyles = makeStyles({
         }
     },
     active: {
-        height: 40,
-        width: 280,
+        height: 60,
+        width: 320,
         display: "flex",
         alignItems: "center",
         padding: "0px 10px",
@@ -51,10 +51,13 @@ export const useStyles = makeStyles({
         }
     },
     btn: {
-        width: 240,
+        width: 280,
         textAlign: "left",
         display: "flex",
         alignItems: "center",
+    },
+    name: {
+        fontSize: 12,
     },
     dot: {
         width: 10,

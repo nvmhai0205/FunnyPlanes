@@ -2,10 +2,17 @@ import React, { useState } from "react";
 import { useStyles } from "./taskitem.style";
 import { Checkbox } from "@mui/material";
 import { pink } from '@mui/material/colors';
+import {DataContext} from "../../context/DataProvider";
 
 function TaskItem(props) {
-    const { status, name } = props;
-    const [check, setCheck] = useState(status);
+    const { step, handleOnTaskCompleted} = props;
+    const {data, setData} = React.useContext(DataContext);
+    const [check, setCheck] = useState(step.isCompleted);
+    const handleOnclick = () => {
+        
+        handleOnTaskCompleted(step);
+        
+    }
     const classes = useStyles();
     return (
         <div className={classes.container}>
@@ -16,10 +23,10 @@ function TaskItem(props) {
                         color: pink[600],
                     },
                 }}
-                checked={check}
-                onClick={() => {setCheck(!check)}}
+                checked={step.isCompleted}
+                onClick={() => {handleOnclick()}}
             />
-            <p>{name}</p>
+            <p>{step.sName}</p>
         </div>
     );
 }

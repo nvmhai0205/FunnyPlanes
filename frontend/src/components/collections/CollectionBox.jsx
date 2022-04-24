@@ -41,7 +41,7 @@ const CollectionBox = ({collection}) => {
     const classes = useStyles();
     const {data, setData} = useContext(DataContext);
 
-    console.log(data);
+    
     
     return (
         <div className={classes.root}>

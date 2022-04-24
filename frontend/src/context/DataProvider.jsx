@@ -5,7 +5,7 @@ export const DataContext = React.createContext();
 
 const DataProvider = ({children}) => {
 
-    const [data, setData] = [jsonData]
+    const [data, setData] = React.useState(jsonData);
 
     return (
     <DataContext.Provider value={{ data, setData}}>

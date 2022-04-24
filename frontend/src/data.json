@@ -5,6 +5,7 @@
             "tasks": [
                 {
                     "tName": "Java basic",
+                    "countComplete": 5,
                     "steps": [
                         {
                             "sName": "Syntax",
@@ -12,24 +13,51 @@
                         },
                         {
                             "sName": "Array",
-                            "isCompleted": false
+                            "isCompleted": true
                         },
                         {
                             "sName": "Class & OOPS",
-                            "isCompleted": false
+                            "isCompleted": true
                         },
                         {
                             "sName": "Interfaces",
-                            "isCompleted": false
+                            "isCompleted": true
                         },
                         {
                             "sName": "Packages",
-                            "isCompleted": false
+                            "isCompleted": true
                         }
                     ]
                 },
                 {
                     "tName": "Android Studio",
+                    "countComplete": 5,
+                    "steps": [
+                        {
+                            "sName": "Android component",
+                            "isCompleted": true
+                        },
+                        {
+                            "sName": "Intent",
+                            "isCompleted": true
+                        },
+                        {
+                            "sName": "UI design",
+                            "isCompleted": true
+                        },
+                        {
+                            "sName": "Storage",
+                            "isCompleted": true
+                        },
+                        {
+                            "sName": "Threading",
+                            "isCompleted": true 
+                        }
+                    ]
+                },
+                {
+                    "tName": "Web Development",
+                    "countComplete": 0,
                     "steps": [
                         {
                             "sName": "Android component",

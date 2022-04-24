@@ -1,54 +1,47 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Task from "../../components/task/task.component";
 import { useStyles } from "./home.style";
 import start from "./../../assets/images/start.png";
 import goal from "./../../assets/images/goal.png";
 import goalno from "./../../assets/images/goalno.png";
 import { Button } from "@mui/material";
+import { DataContext } from "../../context/DataProvider";
 
-const data = [
-    {
-        id: 1,
-        name: "Design the CTA",
-    },
-    {
-        id: 2,
-        name: "Design the CTA",
-    },
-    {
-        id: 3,
-        name: "Design the CTA",
-    },
-    {
-        id: 4,
-        name: "Design the CTA",
-    },
-    {
-        id: 5,
-        name: "Design the CTA",
-    },
-    {
-        id: 6,
-        name: "Design the CTA",
-    },
-];
+
 
 function Home() {
     const classes = useStyles();
+    const {data} = useContext(DataContext);
+    const getNumTaskComplete = () => {
+        const tasks = data.projects[0].tasks;
+        
+        const count = tasks.reduce((prev, tasks) => {
 
-    const [activeStep, setActiveStep] = React.useState(5);
-    const handleSuccess = () => {
-        setActiveStep(activeStep + 1);
-    };
+            if (tasks.countComplete == tasks.steps.length)
+                return prev + 1
+            else
+                return prev
+        }, 0);
+        return count;
+    }
+    const [activeStep, setActiveStep] = React.useState(getNumTaskComplete());
+    const [taskChoose, setTaskChoose] = useState(0);
+
+    const showTask = (i) => {
+        setTaskChoose(i);
+    }
+    useEffect(() => {
+        setActiveStep(getNumTaskComplete());
+    }, [data])
 
     return (
         <div className={classes.root}>
             <div className={classes.fade}></div>
             <div className={classes.head}>
                 <div>
-                    Project: Reduce Weight
+                    Project: {data.projects[0].pName}
                 </div>
-                <p>Status: 0/3 Task</p>
+                <p>Status: {getNumTaskComplete()}/{data.projects[0].tasks.length} Task</p>
             </div>
 
             <div className={classes.container}>
@@ -61,11 +54,13 @@ function Home() {
                             <div className={classes.line}></div>
                         </div>
                     </div>
-                    {data.map((item, index) => {
+                    {data.projects[0].tasks.map((item, index) => {
                         return (
                             <div key={index} className={(index < activeStep) ? classes.item : classes.itemNotActive}>
                                 <div>
-                                    <Button>
+                                    <Button onClick={() => {
+                                        showTask(index);
+                                    }}>
                                         {index + 1}
                                     </Button>
                                 </div>
@@ -76,7 +71,7 @@ function Home() {
                                             : classes.nameDown
                                     }
                                 >
-                                    {item.name}
+                                    {item.tName}
                                 </div>
                                 <div className={classes.linecont}>
                                     <div className={(index < activeStep) ? classes.line : classes.lineNotActive}></div>
@@ -88,13 +83,13 @@ function Home() {
                     <div className={classes.item}>
                         <div className={classes.goal}>
                             {
-                                (activeStep == data.length) ? <img src={goal} /> : <img src={goalno} />
+                                (activeStep == data.projects[0].tasks.length) ? <img src={goal} /> : <img src={goalno} />
                             }
                         </div>
                     </div>
                 </div>
 
-                <Task />
+                <Task data={data.projects[0].tasks[taskChoose]} />
             </div>
         </div>
     );

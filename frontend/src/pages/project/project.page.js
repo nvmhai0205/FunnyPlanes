@@ -1,69 +1,70 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useStyles } from "./project.style";
 import { Button, Grid } from "@mui/material";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { IoIosAddCircle } from "react-icons/io";
 import TaskProject from "../../components/taskProject/taskProject.component";
+import { DataContext } from "../../context/DataProvider";
 
-const data = [
-    {
-        id: 1,
-        name: "Reduce Weight",
-        tasks: [
-            {
-                id: 1,
-                name: "Do exercise",
-                status: true,
-            },
-            {
-                id: 2,
-                name: "Walking",
-                status: false,
-            },
-            {
-                id: 3,
-                name: "Swimming",
-                status: false,
-            },
-        ],
-    },
-    {
-        id: 2,
-        name: "Do PPL assignment",
-        tasks: [
-            {
-                id: 1,
-                name: "Do homework",
-                status: true,
-            },
-            {
-                id: 2,
-                name: "Learn PPL",
-                status: false,
-            },
-            {
-                id: 3,
-                name: "Codding",
-                status: false,
-            },
-        ],
-    },
-];
 
 function Project() {
     const classes = useStyles();
+
+    const {data, setData} = useContext(DataContext);
+
     const [tab, setTab] = useState(0);
-    const [tabData, setTabData] = useState(data[tab]);
+    // const [tabData, setTabData] = useState(data.projects[tab]);
+
+    const [newTask, setNewTask] = React.useState({
+        tName: "",
+        countComplete: 0,
+        steps: [],
+    })
+
+    const [newPro, setNewPro] = React.useState({
+        pName: "",
+        tasks: [],
+    })
+
+    const handleChange = (e) => {
+        const { name, value} = e.target;
+        setNewTask({...newTask, [name]: value});
+    }
+
+    const handleChangePro = (e) => {
+        const { name, value} = e.target;
+        setNewPro({...newPro, [name]: value});
+    }
+
+    const handleAddTask = () => {
+        data.projects[tab].tasks.push(newTask);
+        setData({...data});
+        setNewTask({
+            tName: "",
+            countComplete: 0,
+            steps: [],
+        });
+    }
+
+    const handleAddPro = () => {
+        data.projects.push(newPro);
+        setData({...data});
+        setNewPro({
+            pName: "",
+            tasks: [],
+        });
+    }
+
     return (
         <div className={classes.root}>
             <div className={classes.fade}></div>
             <div>
-                <Grid container spacing={10}>
+                <Grid container spacing={5}>
                     <Grid item xs={3}>
                         <div className={classes.tab}>
                             <h3>Project</h3>
                             <div className={classes.listproject}>
-                                {data.map((item, index) => {
+                                {data.projects.map((item, index) => {
                                     return (
                                         <div
                                             key={index}
@@ -76,7 +77,6 @@ function Project() {
                                             <Button
                                                 onClick={() => {
                                                     setTab(index);
-                                                    setTabData(data[index]);
                                                 }}
                                             >
                                                 <div className={classes.btn}>
@@ -86,7 +86,7 @@ function Project() {
                                                     <div
                                                         className={classes.name}
                                                     >
-                                                        {item.name}
+                                                        {item.pName}
                                                     </div>
                                                 </div>
                                             </Button>
@@ -101,9 +101,12 @@ function Project() {
                                 <form>
                                     <input
                                         type="text"
-                                        placeholder="Add Task"
+                                        placeholder="Add Project"
+                                        name="pName"
+                                        value= {newPro.pName}
+                                        onChange={handleChangePro}
                                     ></input>
-                                    <Button>
+                                    <Button onClick={handleAddPro}>
                                         <IoIosAddCircle />
                                     </Button>
                                 </form>
@@ -112,24 +115,27 @@ function Project() {
                     </Grid>
                     <Grid item xs={9}>
                         <div className={classes.tabContent}>
-                            <h3>{tabData.name}</h3>
+                            <h3>{data.projects[tab].pName}</h3>
                             <div className={classes.addtask}>
                                 <form>
                                     <input
                                         type="text"
                                         placeholder="Add Task"
+                                        name="tName"
+                                        value={newTask.tName}
+                                        onChange={handleChange}
                                     ></input>
-                                    <Button>
+                                    <Button onClick={handleAddTask}>
                                         <IoIosAddCircle />
                                     </Button>
                                 </form>
                             </div>
                             <div className={classes.taskContainer}>
                                 <Grid container spacing={2}>
-                                    {tabData.tasks.map((step, index) => {
+                                    {data.projects[tab].tasks.map((task, index) => {
                                         return (
                                             <Grid key={index} item xs={4}>
-                                                <TaskProject data={step} />
+                                                <TaskProject task={task} />
                                             </Grid>
                                         );
                                     })}
