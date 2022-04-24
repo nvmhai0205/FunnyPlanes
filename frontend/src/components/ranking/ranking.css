@@ -12,23 +12,27 @@
 }
 #ranking .title h2 {
     /* display: inline-block; */
-    width: 40%;
+    width: 45%;
     margin: 24px auto 32px auto;
     text-align: center;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #EE4266;
     padding-bottom: 24px;
+    color: #EE4266;
 }
 #ranking .title h3 {
     /* display: inline-block; */
     margin-left: 60%;
+    color: #EE4266;
 }
 #ranking .table{
-    width: 100vw;
-    height: 100%;
+    width: 700px;
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 36px;
+    border: solid 1px #EE4266;
+    margin: auto;
 }
     
 

@@ -28,6 +28,7 @@ function Ranking() {
 
     return (
         <div id="ranking" >
+            <div style={{height: 80}}></div>
             <div className="title">
                 <h3>My Ranking : 167</h3>
                 <h3>My card: 97</h3>

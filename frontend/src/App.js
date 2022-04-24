@@ -10,7 +10,7 @@ import Rank from "./pages/ranking/ranking"
 function App() {
     return (
         <BrowserRouter>
-            <Rank />
+            <Client />
         </BrowserRouter>
     );
 }

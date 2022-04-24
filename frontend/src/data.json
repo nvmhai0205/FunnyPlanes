@@ -1,0 +1,206 @@
+{
+    "projects": [
+        {
+            "pName": "Learning Android development",
+            "tasks": [
+                {
+                    "tName": "Java basic",
+                    "steps": [
+                        {
+                            "sName": "Syntax",
+                            "isCompleted": true
+                        },
+                        {
+                            "sName": "Array",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "Class & OOPS",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "Interfaces",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "Packages",
+                            "isCompleted": false
+                        }
+                    ]
+                },
+                {
+                    "tName": "Android Studio",
+                    "steps": [
+                        {
+                            "sName": "Android component",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "Intent",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "UI design",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "Storage",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "Threading",
+                            "isCompleted": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pName": "Learning Web development",
+            "tasks": [
+                {
+                    "tName": "Javascript",
+                    "steps": [
+                        {
+                            "sName": "Syntax",
+                            "isCompleted": true
+                        },
+                        {
+                            "sName": "Array",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "Scope",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "IIFE",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "Hoisting",
+                            "isCompleted": false
+                        }
+                    ]
+                },
+                {
+                    "tName": "NodeJS",
+                    "steps": [
+                        {
+                            "sName": "Non-Blocking I/O",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "Single Thread",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "Event Driven",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "Node Package Manager",
+                            "isCompleted": false
+                        },
+                        {
+                            "sName": "No Buffering",
+                            "isCompleted": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "collections": [
+        {
+            "symbol": "https://user-images.githubusercontent.com/75929269/164912584-7323eea9-8e1e-4426-ba0b-e37fd16c23f7.png",
+            "items": [
+                {
+                    "src": "https://user-images.githubusercontent.com/75929269/164912586-65f7b82f-48a5-4746-b256-3a88319cb7d9.png",
+                    "collected": false
+                },
+                {
+                    "src": "https://user-images.githubusercontent.com/75929269/164912586-65f7b82f-48a5-4746-b256-3a88319cb7d9.png",
+                    "collected": false
+                },
+
+                {
+                    "src": "https://user-images.githubusercontent.com/75929269/164912586-65f7b82f-48a5-4746-b256-3a88319cb7d9.png",
+                    "collected": false
+                },
+
+                {
+                    "src": "https://user-images.githubusercontent.com/75929269/164912586-65f7b82f-48a5-4746-b256-3a88319cb7d9.png",
+                    "collected": false
+                },
+
+                {
+                    "src": "https://user-images.githubusercontent.com/75929269/164912586-65f7b82f-48a5-4746-b256-3a88319cb7d9.png",
+                    "collected": false
+                }
+            ]
+        },
+        {
+            "symbol": "https://user-images.githubusercontent.com/75929269/164912589-afeece45-326c-4325-8961-6c4b891b9a0b.png",
+            "items": [
+                {
+                    "src": "https://user-images.githubusercontent.com/75929269/164912586-65f7b82f-48a5-4746-b256-3a88319cb7d9.png",
+                    "collected": false
+                },
+                {
+                    "src": "https://user-images.githubusercontent.com/75929269/164912586-65f7b82f-48a5-4746-b256-3a88319cb7d9.png",
+                    "collected": false
+                },
+                {
+                    "src": "https://user-images.githubusercontent.com/75929269/164912586-65f7b82f-48a5-4746-b256-3a88319cb7d9.png",
+                    "collected": false
+                },
+                {
+                    "src": "https://user-images.githubusercontent.com/75929269/164912586-65f7b82f-48a5-4746-b256-3a88319cb7d9.png",
+                    "collected": false
+                }
+            ]
+        },
+        {
+            "symbol": "https://user-images.githubusercontent.com/75929269/164951174-2a5caa97-ee97-4870-815b-2834d9c4e57d.png",
+            "items": [
+                {
+                    "src": "https://assets.pokemon.com/assets/cms2/img/cards/web/XYA/XYA_EN_28a.png",
+                    "collected": false
+                },
+                {
+                    "src": "https://assets.pokemon.com/assets/cms2/img/cards/web/BWP/BWP_EN_BW05.png",
+                    "collected": true
+                },
+                {
+                    "src": "https://assets.pokemon.com/assets/cms2/img/cards/web/BWP/BWP_EN_BW54.png",
+                    "collected": false
+                },
+                {
+                    "src": "https://assets.pokemon.com/assets/cms2/img/cards/web/BWP/BWP_EN_BW81.png",
+                    "collected": true
+                },
+                {
+                    "src": "https://assets.pokemon.com/assets/cms2/img/cards/web/BWP/BWP_EN_BW67.png",
+                    "collected": true
+                },
+                {
+                    "src": "https://assets.pokemon.com/assets/cms2/img/cards/web/HSP/HSP_EN_HGSS17.png",
+                    "collected": false
+                },
+                {
+                    "src": "https://assets.pokemon.com/assets/cms2/img/cards/web/SMP/SMP_EN_SM65.png",
+                    "collected": false
+                },
+                {
+                    "src": "https://assets.pokemon.com/assets/cms2/img/cards/web/SMP/SMP_EN_SM31.png",
+                    "collected": false
+                },
+                {
+                    "src": "https://assets.pokemon.com/assets/cms2/img/cards/web/SMP/SMP_EN_SM44.png",
+                    "collected": false
+                }
+            ]
+        }
+    ]
+}

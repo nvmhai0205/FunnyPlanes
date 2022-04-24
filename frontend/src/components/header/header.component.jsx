@@ -6,10 +6,11 @@ import { RiHomeHeartFill } from "react-icons/ri";
 import { AiOutlineProject, AiOutlineSetting, AiFillFire } from "react-icons/ai";
 import { MdOutlineCollectionsBookmark } from "react-icons/md";
 import { FaMedal, FaUserAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
     const classes = useStyles();
-
+    const navigate = useNavigate();
     const [login, setLogin] = useState(true);
 
     return (
@@ -59,7 +60,9 @@ function Header() {
                     <div className={classes.user}>
                         <Grid container spacing={0}>
                             <Grid item xs={4}>
-                                <Button>
+                                <Button onClick={() => {
+                                    navigate("/rank")
+                                }}>
                                     <FaMedal />
                                 </Button>
                             </Grid>
