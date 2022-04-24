@@ -7,185 +7,185 @@ import FireImg from "../../../src/assets/images/fire.png"
 import WaterImg from "../../../src/assets/images/waterImg.png"
 import WaterItem from "../../assets/images/water.png"
 
-const collections = [{img: FireImg
-    ,items: [
-    {
-        src: item,
-        collected: false
-    },
-    {
-        src: item,
-        collected: true
-    },
-    {
-        src: item,
-        collected: false
-    },
-    {
-        src: item,
-        collected: true
-    },{
-        src: item,
-        collected: false
-    },
-    {
-        src: item,
-        collected: true
-    }
+// const collections = [{img: FireImg
+//     ,items: [
+//     {
+//         src: item,
+//         collected: false
+//     },
+//     {
+//         src: item,
+//         collected: true
+//     },
+//     {
+//         src: item,
+//         collected: false
+//     },
+//     {
+//         src: item,
+//         collected: true
+//     },{
+//         src: item,
+//         collected: false
+//     },
+//     {
+//         src: item,
+//         collected: true
+//     }
 
 
-]},
-{img: WaterImg
-    ,items: [
-    {
-        src: WaterItem,
-        collected: true
-    },
-    {
-        src: WaterItem,
-        collected: false
-    },
-    {
-        src: WaterItem,
-        collected: false
-    },
-    {
-        src: WaterItem,
-        collected: false
-    },{
-        src: WaterItem,
-        collected: true
-    },
-    {
-        src: WaterItem,
-        collected: true
-    }
+// ]},
+// {img: WaterImg
+//     ,items: [
+//     {
+//         src: WaterItem,
+//         collected: true
+//     },
+//     {
+//         src: WaterItem,
+//         collected: false
+//     },
+//     {
+//         src: WaterItem,
+//         collected: false
+//     },
+//     {
+//         src: WaterItem,
+//         collected: false
+//     },{
+//         src: WaterItem,
+//         collected: true
+//     },
+//     {
+//         src: WaterItem,
+//         collected: true
+//     }
 
 
-]},
-{img: FireImg
-    ,items: [
-    {
-        src: item,
-        collected: false
-    },
-    {
-        src: item,
-        collected: true
-    },
-    {
-        src: item,
-        collected: false
-    },
-    {
-        src: item,
-        collected: true
-    },{
-        src: item,
-        collected: false
-    },
-    {
-        src: item,
-        collected: true
-    }
+// ]},
+// {img: FireImg
+//     ,items: [
+//     {
+//         src: item,
+//         collected: false
+//     },
+//     {
+//         src: item,
+//         collected: true
+//     },
+//     {
+//         src: item,
+//         collected: false
+//     },
+//     {
+//         src: item,
+//         collected: true
+//     },{
+//         src: item,
+//         collected: false
+//     },
+//     {
+//         src: item,
+//         collected: true
+//     }
 
 
-]},
-{img: WaterImg
-    ,items: [
-    {
-        src: WaterItem,
-        collected: true
-    },
-    {
-        src: WaterItem,
-        collected: false
-    },
-    {
-        src: WaterItem,
-        collected: false
-    },
-    {
-        src: WaterItem,
-        collected: false
-    },{
-        src: WaterItem,
-        collected: true
-    },
-    {
-        src: WaterItem,
-        collected: true
-    }
+// ]},
+// {img: WaterImg
+//     ,items: [
+//     {
+//         src: WaterItem,
+//         collected: true
+//     },
+//     {
+//         src: WaterItem,
+//         collected: false
+//     },
+//     {
+//         src: WaterItem,
+//         collected: false
+//     },
+//     {
+//         src: WaterItem,
+//         collected: false
+//     },{
+//         src: WaterItem,
+//         collected: true
+//     },
+//     {
+//         src: WaterItem,
+//         collected: true
+//     }
 
 
-]},
+// ]},
 
-{img: FireImg
-    ,items: [
-    {
-        src: item,
-        collected: false
-    },
-    {
-        src: item,
-        collected: true
-    },
-    {
-        src: item,
-        collected: false
-    },
-    {
-        src: item,
-        collected: true
-    },{
-        src: item,
-        collected: false
-    },
-    {
-        src: item,
-        collected: true
-    }
-
-
-]},
-{img: WaterImg
-    ,items: [
-    {
-        src: WaterItem,
-        collected: true
-    },
-    {
-        src: WaterItem,
-        collected: false
-    },
-    {
-        src: WaterItem,
-        collected: false
-    },
-    {
-        src: WaterItem,
-        collected: true
-    },{
-        src: WaterItem,
-        collected: false
-    },
-    {
-        src: WaterItem,
-        collected: true
-    },
-    {
-        src: WaterItem,
-        collected: true
-    }
+// {img: FireImg
+//     ,items: [
+//     {
+//         src: item,
+//         collected: false
+//     },
+//     {
+//         src: item,
+//         collected: true
+//     },
+//     {
+//         src: item,
+//         collected: false
+//     },
+//     {
+//         src: item,
+//         collected: true
+//     },{
+//         src: item,
+//         collected: false
+//     },
+//     {
+//         src: item,
+//         collected: true
+//     }
 
 
-]},
+// ]},
+// {img: WaterImg
+//     ,items: [
+//     {
+//         src: WaterItem,
+//         collected: true
+//     },
+//     {
+//         src: WaterItem,
+//         collected: false
+//     },
+//     {
+//         src: WaterItem,
+//         collected: false
+//     },
+//     {
+//         src: WaterItem,
+//         collected: true
+//     },{
+//         src: WaterItem,
+//         collected: false
+//     },
+//     {
+//         src: WaterItem,
+//         collected: true
+//     },
+//     {
+//         src: WaterItem,
+//         collected: true
+//     }
 
-]
+
+// ]},
+
+// ]
 
 const STEP = 2;
 
-const MyCollections = ({}) => {
+const MyCollections = ({collections}) => {
 
     const classes = useStyles();
    

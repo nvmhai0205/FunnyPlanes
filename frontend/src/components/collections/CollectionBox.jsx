@@ -36,7 +36,7 @@ const CollectionBox = ({collection}) => {
         <div className={classes.root}>
             <div className={classes.header}>
                 
-                <img src={collection.img} alt="Icon img" className={classes.iconImg}/>
+                <img src={collection.symbol} alt="Icon img" className={classes.iconImg}/>
                 
             </div>
 
