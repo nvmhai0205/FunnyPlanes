@@ -12,7 +12,7 @@ export const useStyles = makeStyles({
         height: 60,
         display: 'flex',
         alignItems: "center",
-        "& div": {
+        "& h5": {
             backgroundColor: "#EE4266",
             color: "white",
             padding: "10px 20px",
@@ -127,5 +127,56 @@ export const useStyles = makeStyles({
             height: 50,
             width: 50,
         } 
+    },
+    choosePro: {
+        backgroundColor: "transparent",
+        "& button": {
+            backgroundColor: "#FFC800",
+            color: "white",
+            "& svg": {
+                height: 25,
+                width: 25,
+            }
+        },
+        margin: 10,
+    },
+    morePro: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        minHeight: 400,
+        backgroundColor: 'white',
+        boxShadow: 24,
+        borderRadius: 10,
+        "& h3": {
+            color: "#EE4266",
+            textAlign: "center",
+            marginTop: 30,
+        }
+    },
+    allpro: {
+        height: 300,
+        width: 400,
+        border: '1px solid #ddd',
+        marginTop: 10,
+        overflowY: "scroll",
+        padding: "30px 45px",
+    },
+    activePro: {
+        backgroundColor: '#EE4266 !important',
+        width: "300px",
+        textAlign: 'left',
+        color: "white !important",
+    },
+    noActivePro: {
+        backgroundColor: '#dddddddd !important',
+        width: "300px",
+        textAlign: 'left',
+        color: "white !important",
+        "&:hover": {
+            backgroundColor: '#EE4266aa !important',
+        }
     }
 })

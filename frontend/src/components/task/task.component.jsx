@@ -35,6 +35,7 @@ function Task(props) {
             }
             handleOpen();
         }
+        console.log(data, projects);
         setData({ ...projects });
     };
 
