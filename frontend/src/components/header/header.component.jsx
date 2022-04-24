@@ -37,7 +37,7 @@ function Header() {
                                 </Link>
                             </Grid>
                             <Grid item xs={3}>
-                                <Link to="/">
+                                <Link to="/mycollections">
                                     <div className={classes.navitem}>
                                         <MdOutlineCollectionsBookmark />
                                         Collection

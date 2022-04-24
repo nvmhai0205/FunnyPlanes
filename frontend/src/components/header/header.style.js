@@ -3,11 +3,12 @@ import themes from "../../themes/theme";
 
 export const useStyles = makeStyles({
     root: {
-        height: 90,
+        height: 80,
         borderBottom: "1px solid #aaa",
         position: "fixed",
         backgroundColor: 'white',
         width: "100%",
+        zIndex: 1000,
     },
     navbar: {
         height: 80,
