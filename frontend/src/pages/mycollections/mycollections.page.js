@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Button, Grid} from "@mui/material";
 import useStyles from './mycollections.style';
 import CollectionBox from '../../components/collections/CollectionBox';
@@ -6,6 +6,7 @@ import item from "../../assets/images/item.png"
 import FireImg from "../../../src/assets/images/fire.png"
 import WaterImg from "../../../src/assets/images/waterImg.png"
 import WaterItem from "../../assets/images/water.png"
+import { DataContext } from '../../context/DataProvider';
 
 const collections = [{img: FireImg
     ,items: [
@@ -190,7 +191,8 @@ const MyCollections = ({}) => {
     const classes = useStyles();
    
     const [maxIndex, setMaxIndex] = useState(STEP - 1);
-    
+    const {data} = useContext(DataContext);
+
     return (
         <>
             <div className={classes.headerContainer}>
@@ -200,7 +202,7 @@ const MyCollections = ({}) => {
             </div>
             <div className={classes.collectionsBox}>
             {
-                collections.map((collection, index) => index <= maxIndex ? <CollectionBox collection={collection} key={index}/> : null)
+                data.collections.map((collection, index) => index <= maxIndex ? <CollectionBox collection={collection} key={index}/> : null)
             }
             
             </div>

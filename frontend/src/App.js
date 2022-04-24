@@ -6,11 +6,14 @@ import {
 } from "react-router-dom";
 import Client from "./pages/client.module";
 import Rank from "./pages/ranking/ranking"
+import DataProvider from "./context/DataProvider";
 
 function App() {
     return (
         <BrowserRouter>
-            <Client />
+            <DataProvider>
+                <Client />
+            </DataProvider>
         </BrowserRouter>
     );
 }

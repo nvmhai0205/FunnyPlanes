@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { makeStyles } from '@mui/styles'
 import FireImg from "../../../src/assets/images/fire.png"
 import { Grid, Button } from "@mui/material";
 import { CardMedia } from '@mui/material';
+import { DataContext } from '../../context/DataProvider';
 
 const useStyles = makeStyles({
     root: {
@@ -38,12 +39,15 @@ const useStyles = makeStyles({
 const CollectionBox = ({collection}) => {
 
     const classes = useStyles();
+    const {data, setData} = useContext(DataContext);
+
+    console.log(data);
     
     return (
         <div className={classes.root}>
             <div className={classes.header}>
                 
-                <img src={collection.img} alt="Icon img" className={classes.iconImg}/>
+                <img src={collection.symbol} alt="Icon img" className={classes.iconImg}/>
                 
             </div>
 
@@ -51,7 +55,7 @@ const CollectionBox = ({collection}) => {
                 {
                     collection.items.map((item, index) => 
                     <Grid className={classes.wrapper} item xs={6} sm={4} md={2}>
-                        <img src={item.src} className={classes.itemImg + " " + (item.collected ? classes.inActive: '')}/>
+                        <img src={item.src} className={classes.itemImg + " " + (!item.collected ? classes.inActive: '')}/>
                     </Grid>
                     )
                 }
