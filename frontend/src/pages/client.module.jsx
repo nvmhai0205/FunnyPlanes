@@ -16,6 +16,7 @@ function Client() {
                 <Route path="/mycollections" element={<MyCollections />} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
+            
         </>
     );
 }
